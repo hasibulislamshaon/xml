@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as x
 data='''<person><name>Hasibul</name>
-<phn type="intl">+8801756764966</phn>
+<phn type="intl">+8801756746</phn>
 <email hide="No"/>
 </person>'''
 infoHasibul= x.fromstring(data)

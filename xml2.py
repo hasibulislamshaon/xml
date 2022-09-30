@@ -1,7 +1,9 @@
 import xml.etree.ElementTree as x
-data='''<student>
-<person><name>Hasibul</name>
-<phn type="intl">+8801756764966</phn>
+data='''<staff>
+<student>
+<person>
+<name z='1310'>Hasibul</name>
+<phn type="intl">+88017567666</phn>
 <email hide="No"/>
 </person>
 <person><name>Polok</name>
@@ -16,12 +18,14 @@ data='''<student>
 <phn type="intl">+88017****</phn>
 <email hide="No"/>
 </person>
-</student>'''
+</student>
+</staff>'''
 infoall= x.fromstring(data)
 all=infoall.findall("student/person")
 print(len(all))
-"""for allin in all:
+print(all)
+for allin in all:
  print(f"Name: {allin.find('name').text}")
  print(f"Phone: {allin.find('phn').text}")
  print(f"Attr: {allin.find('email').get('hide')}")#get the child attribute
- """
+ print(f"Attribute: {allin.get('z')}")
